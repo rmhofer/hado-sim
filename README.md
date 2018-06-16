@@ -12,52 +12,62 @@ We can either run a full, multi-stage simulation, or specify prior and/or design
 
 The code enables us to do both of these things by executing the python script in the main folder, run_ado.py, in some of the following ways:
 
+```
 python run_ado.py --config=config.txt --full --seed=123
+```
 
+```
 python run_ado.py --config=config.txt --seed=123 --stage=2 --prior=data/test/hado_sid_0_stage_001_prior.npy
+```
 
+```
 python run_ado.py --config=config.txt --seed=123 --stage=4 --prior=data/test/hado_sid_0_stage_003_posterior_0.npy --design=data/test/hado_sid_0_stage_004_design.npy
+```
 
 ## Running simulations
 
 In general, execution follows this format:
 
+```
 python run_ado.py [Options]
+```
 
-With the following options availalbe:
+**With the following options available:**
 
 ```
 --config=path to config file
 ```
 	
-:	Use the config flag to specify the path to the configuration file (a simple text file, see more details below) that contains the arguments for ado initialization.
+	Use the config flag to specify the path to the configuration file (a simple text file, see more details below) that contains the arguments for ado initialization.
 
 ```
 --seed=number
 ```
 
-:	Optionally use a particular random seed for reproducibility.
+	Optionally use a particular random seed for reproducibility.
 
 ```
 --full
 ```
 	
-:	Use the 'full' flag to run a full simulation with the arguments specified in the config file. None of the remaining three arguments will have an effect if full simulations are run. Otherwise (if the 'full' flag is omitted), the script will run a stepwise simulation.
+	Use the 'full' flag to run a full simulation with the arguments specified in the config file. None of the remaining three arguments will have an effect if full simulations are run. Otherwise (if the 'full' flag is omitted), the script will run a stepwise simulation.
 
 
-Only for stepwise simulations:
+<hr \>
+
+**Only for stepwise simulations:**
 
 ```
 --stage=number
 ```
 
-:	The current experimental stage.
+	The current experimental stage.
 
 ```
 --prior=path to prior file (format: npy)
 ```
 
-:	Specify a custom belief (prior) to be used in the current experimental stage.
+	Specify a custom belief (prior) to be used in the current experimental stage.
 
 ```
 --design=path to design file (format: npy)
