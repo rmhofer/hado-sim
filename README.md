@@ -22,7 +22,7 @@ python run_ado.py [Options]
 
 With the following options availalbe:
 
-'--config=path to config file'
+`--config=path to config file`
 	
 	use the config flat to specify a patch to the configuration file (a text file, see below), that contains the arguments passed on to the ado initialize method.
 
