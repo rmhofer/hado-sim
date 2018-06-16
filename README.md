@@ -1,4 +1,6 @@
-Simulation code to run Hierarchical Adaptive Design Optimization (Cavagnaro, Myung, Pitt, NIPS 2009) with the experience-based learning paradigm.
+# HADO README
+
+### Simulation code to run Hierarchical Adaptive Design Optimization (Cavagnaro, Myung, Pitt, NIPS 2009) with the experience-based learning paradigm.
 
 People first engage in a classification learning task and subsequently in a information acquisition task. This code only works for the 3 category / 2 binary feature case. Our goal is to infer which model (=> set of three parameters, two parameters specifying degree/order of Sharma-Mittal entropy measure and one parameter associated with the response function) best describes participants behavior. This particular instance of the code only works for a binary response, i.e., subjects either prefer the first or the second feature.
 
@@ -16,47 +18,59 @@ python run_ado.py --config=config.txt --seed=123 --stage=2 --prior=data/test/had
 
 python run_ado.py --config=config.txt --seed=123 --stage=4 --prior=data/test/hado_sid_0_stage_003_posterior_0.npy --design=data/test/hado_sid_0_stage_004_design.npy
 
+## Running simulations
+
 In general, execution follows this format:
 
 python run_ado.py [Options]
 
 With the following options availalbe:
 
-> `--config=path_to_config_file`
+```
+--config=path to config file
+```
 	
->>	use the config flat to specify a patch to the configuration file (a text file, see below), that contains the arguments passed on to the ado initialize method.
+:	Use the config flag to specify the path to the configuration file (a simple text file, see more details below) that contains the arguments for ado initialization.
 
+```
 --seed=number
+```
 
-	Use a particular random seed for reproducibility
+:	Optionally use a particular random seed for reproducibility.
 
+```
 --full
+```
 	
-	Use the full flag to run a full simulation with the arguments specified in the config file. Otherwise (if the full flag is omitted), run a stepwise simulation.
+:	Use the 'full' flag to run a full simulation with the arguments specified in the config file. None of the remaining three arguments will have an effect if full simulations are run. Otherwise (if the 'full' flag is omitted), the script will run a stepwise simulation.
 
 
-All the remaining arguments only have to be specified if stepwise simulations are run:
+Only for stepwise simulations:
 
+```
 --stage=number
+```
 
-	The current experimental stage
+:	The current experimental stage.
 
+```
 --prior=path to prior file (format: npy)
+```
 
-	Specify a custom belief prior to be used in the current experimental stage
+:	Specify a custom belief (prior) to be used in the current experimental stage.
 
+```
 --design=path to design file (format: npy)
+```
 
-	Specify a custom design used to simulate the response.
-
-	Specification of both a prior and a design for the current experimental stage are optional. If no prior is specified, use the prior in config.txt. If no design is specified, perform DO with the optimization method specified in config.txt to search for a design.
-
-
-//hline
+:	Specify a custom design used to simulate the response. Specification of both prior and design for the current experimental stage are optional. If no prior is specified, use the prior in the config file. If no design is specified, perform DO with the optimization method specified in the config file to search for a design.
 
 
-The config file:
+## The config file
 
+All other important parameters are specified in a text file that is passed before execution using the config flag. A variety of parameters can be set. Here is an example from the current config file:
+
+```
 true_order=7
 true_degree=5
 true_beta=0
@@ -76,11 +90,11 @@ filename='jonathan_test/hado_sid_0_stage_'
 parallelize=True
 n_designs=10
 n_iterations=1
+```
 
+The config file can contain any number of those parameters. If omitted, they will fall back to their default values (specified in brackets). Parameters can be grouped according to the following categpories:
 
-None of the following is necessary, all can be omitted, if omitted, the method will default to the arguments specified below:
-
-Model parameters, parameter space (order, degree, beta)
+**Model parameters, parameter space (order, degree, beta)**
 
 	granularity = 1|4 (1) //of logxlog grid, by default 13x13
 	betaSpace
@@ -90,13 +104,13 @@ Model parameters, parameter space (order, degree, beta)
 	true_beta
 	prior = uni|exp|rand
 
-Experimental design parameters:
+**Experimental design parameters:**
 
 	N_categories=3
 	N_features=2
 	n_trials=1
 
-DO parameters (incl. method-specific optimization arguments)
+**DO parameters (incl. method-specific optimization arguments)**
 	
 	method='mcmc'
 	learnability=True
@@ -106,7 +120,7 @@ DO parameters (incl. method-specific optimization arguments)
 	n_iterations=1
 
 
-Misc parameters
+**Misc parameters**
 
 	logging=True
 	plotting=False
@@ -114,7 +128,4 @@ Misc parameters
 	filename='test/hado_sid_0' #will automatically add _stage_ at the end!!
 	it is recommended to separate parameters and values by underscore, e.g. history_0101011 (for history of responses)
 
-Filepath and filename: Specify a custom filepath and name to save the simulation results, relative to the main folder
-
-
-All results (plots/designs/beliefs) will be saved in data // logs will be saved in logs
+Filepath and filename: Specify a custom filepath and name to save the simulation results, relative to the main folder. All results (plots/designs/beliefs) will be saved in data // logs will be saved in logs
