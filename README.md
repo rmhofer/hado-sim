@@ -106,13 +106,16 @@ The config file can contain any number of those parameters. If omitted, they wil
 
 **Model parameters, parameter space (order, degree, beta)**
 
-	granularity = 1|4 (1) //of logxlog grid, by default 13x13
-	betaSpace
+- granularity: 1 or 4  (1)  
+	- density of log x log degree/order parameter grid
+- betaSpace: [1] 
+	- use only a single beta value of one 
 	true_beta=index to array, default uniform sample (specifies an index)
 	true_order=7
 	true_degree=5
 	true_beta
 	prior = uni|exp|rand
+
 
 **Experimental design parameters:**
 
