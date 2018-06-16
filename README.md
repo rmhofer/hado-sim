@@ -38,13 +38,13 @@ python run_ado.py [Options]
 --config=path to config file
 ```
 	
-	Use the config flag to specify the path to the configuration file (a simple text file, see more details below) that contains the arguments for ado initialization.
+>	Use the config flag to specify the path to the configuration file (a simple text file, see more details below) that contains the arguments for ado initialization.
 
 ```
 --seed=number
 ```
 
-	Optionally use a particular random seed for reproducibility.
+>	Optionally use a particular random seed for reproducibility.
 
 ```
 --full
