@@ -2,7 +2,7 @@
 
 ### Simulation code to run Hierarchical Adaptive Design Optimization (Cavagnaro, Myung, Pitt, NIPS 2009) with the experience-based learning paradigm.
 
-People first engage in a classification learning task and subsequently in a information acquisition task. This code only works for the 3 category / 2 binary feature case. Our goal is to infer which model (=> set of three parameters, two parameters specifying degree/order of Sharma-Mittal entropy measure and one parameter associated with the response function) best describes participants behavior. This particular instance of the code only works for a binary response, i.e., subjects either prefer the first or the second feature.
+People first engage in a classification learning task and subsequently in an information acquisition task. This code only works for the 3 category / 2 binary feature case. Our goal is to infer which model (=> set of three parameters, two parameters specifying degree/order of Sharma-Mittal entropy measure and one parameter associated with the response function) best describes participants behavior. This particular instance of the code only works for a binary response, i.e., subjects either prefer the first or the second feature.
 
 In running simulations we are particularly interested in two use cases:
 - Use case 1: We want to run full simulation studies over many stages, simulating sequential responses for particular combinations of degree/order/response beta.
@@ -10,7 +10,7 @@ In running simulations we are particularly interested in two use cases:
 
 We can either run a full, multi-stage simulation, or specify prior and/or design and only run a single HADO step. To exectute these commands, no installation is necessary, just download and copy the repository to a local folder.
 
-The code enables us to do both of these things by executing the python script in the main folder, run_ado.py, in some of the following ways:
+The code enables us to do both of these things by executing the python script in the main folder, run_ado.py, e.g., in the following ways:
 
 ```
 python run_ado.py --config=config.txt --full --seed=123
