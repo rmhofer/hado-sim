@@ -1,0 +1,89 @@
+Environment:
+Prior
+[0.22882439 0.5110192  0.26015641]
+
+Likelihoods
+[[0.26340434 0.73659566]
+ [0.53307099 0.46692901]]
+
+Feature marginals
+[[0.98980996 0.07223149 0.        ]
+ [0.74958233 0.52075248 0.36683224]]
+
+Feature Posteriors
+[[[0.85986685 0.14013315 0.        ]
+  [0.00316555 0.64364692 0.35318754]]
+
+ [[0.32176337 0.49921028 0.17902635]
+  [0.12272031 0.5245009  0.35277879]]]
+
+Marginals (combined)
+[0.18899674 0.07440759 0.34407425 0.39252141]
+
+Posteriors (combined)
+[[0.89829535 0.10170465 0.        ]
+ [0.76225773 0.23774227 0.        ]
+ [0.00507979 0.71755637 0.27736384]
+ [0.00148758 0.57885977 0.41965265]]
+
+Joint probabilities
+[[0.1697749  0.01922185 0.        ]
+ [0.05671776 0.01768983 0.        ]
+ [0.00174782 0.24689267 0.09543376]
+ [0.00058391 0.22721486 0.16472265]]
+
+!!! Use flattened joint probabilities array (from top left to bottom right) for experience-based learning experiment !!!
+
+
+True order: 0.354 (idx: 7) degree: 0.25 (idx: 5) and beta 1 (idx: 0)
+Designs evaluated: 10
+
+Optimization method set to: ** Markov Chain Monte Carlo (MCMC) **
+
+### STEP 1 ###
+	### executing optimization method ... ###
+	### MCMC acceptance rate: 0.30 ###
+	### ... done! ###
+	### time per design eval = 0.848850393295
+	### U(d) = 0.1283 ###
+	### L(d) = 0.96581934 (post), 0.89795599 (joint) ###
+	### Heterogeneity (0-1) = 0.89612 ###
+	### U(.)*L(.)  = 0.0997 ###
+	### effective beta = 0.86726
+	### simulated response: 0
+	### execution time (s): 8.48850393295 ###
+
+
+Results successfully SAVED as data/test/hado_sid_0_stage_001!!
+
+### STEP 2 ###
+	### executing optimization method ... ###
+	### MCMC acceptance rate: 0.30 ###
+	### ... done! ###
+	### time per design eval = 0.639877510071
+	### U(d) = 0.1156 ###
+	### L(d) = 0.91354980 (post), 0.91831970 (joint) ###
+	### Heterogeneity (0-1) = 0.72053 ###
+	### U(.)*L(.)  = 0.0699 ###
+	### effective beta = 0.83893
+	### simulated response: 1
+	### execution time (s): 6.39877510071 ###
+
+
+Results successfully SAVED as data/test/hado_sid_0_stage_002!!
+
+### STEP 3 ###
+	### executing optimization method ... ###
+	### MCMC acceptance rate: 0.50 ###
+	### ... done! ###
+	### time per design eval = 0.677579689026
+	### U(d) = 0.1463 ###
+	### L(d) = 0.82860731 (post), 0.73998887 (joint) ###
+	### Heterogeneity (0-1) = 0.83184 ###
+	### U(.)*L(.)  = 0.0746 ###
+	### effective beta = 0.61316
+	### simulated response: 1
+	### execution time (s): 6.77579689026 ###
+
+
+Results successfully SAVED as data/test/hado_sid_0_stage_003!!

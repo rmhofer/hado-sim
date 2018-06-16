@@ -1,0 +1,57 @@
+Environment:
+Prior
+[0.48162522 0.12370991 0.39466487]
+
+Likelihoods
+[[0.4401619  0.5598381 ]
+ [0.56983436 0.43016564]]
+
+Feature marginals
+[[0.86027396 0.20881319 0.        ]
+ [0.31682077 0.18252875 1.        ]]
+
+Feature Posteriors
+[[[0.94131191 0.05868809 0.        ]
+  [0.12020544 0.17483206 0.7049625 ]]
+
+ [[0.26777759 0.03962663 0.69259578]
+  [0.76490616 0.23509384 0.        ]]]
+
+Marginals (combined)
+[0.13598337 0.30417853 0.433851   0.12598711]
+
+Posteriors (combined)
+[[0.96532568 0.03467432 0.        ]
+ [0.93057653 0.06942347 0.        ]
+ [0.04914277 0.04117885 0.90967838]
+ [0.36491786 0.63508214 0.        ]]
+
+Joint probabilities
+[[0.13126824 0.00471513 0.        ]
+ [0.2830614  0.02111713 0.        ]
+ [0.02132064 0.01786548 0.39466487]
+ [0.04597495 0.08001216 0.        ]]
+
+!!! Use flattened joint probabilities array (from top left to bottom right) for experience-based learning experiment !!!
+
+
+True order: 0.354 (idx: 7) degree: 0.25 (idx: 5) and beta 1 (idx: 0)
+Designs evaluated: 10
+
+Optimization method set to: ** Markov Chain Monte Carlo (MCMC) **
+
+### STEP 2 ###
+	### executing optimization method ... ###
+	### MCMC acceptance rate: 0.30 ###
+	### ... done! ###
+	### time per design eval = 0.725023484230
+	### U(d) = 0.1283 ###
+	### L(d) = 0.96581934 (post), 0.89795599 (joint) ###
+	### Heterogeneity (0-1) = 0.89612 ###
+	### U(.)*L(.)  = 0.0997 ###
+	### effective beta = 0.86726
+	### simulated response: 0
+	### execution time (s): 7.2502348423 ###
+
+
+Results successfully SAVED as data/test/hado_sid_0_stage_002!!
