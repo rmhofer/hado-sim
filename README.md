@@ -22,9 +22,9 @@ python run_ado.py [Options]
 
 With the following options availalbe:
 
-`--config=path to config file`
+> `--config=path_to_config_file`
 	
-	use the config flat to specify a patch to the configuration file (a text file, see below), that contains the arguments passed on to the ado initialize method.
+>>	use the config flat to specify a patch to the configuration file (a text file, see below), that contains the arguments passed on to the ado initialize method.
 
 --seed=number
 
