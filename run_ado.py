@@ -28,11 +28,13 @@ def main():
 				for line in configFile:
 					s += line.split('#', 1)[0].rstrip() + ' '
 			kwargs = dict((k, literal_eval(v)) for k, v in (pair.split('=') for pair in s.split()))
-			
-			#make separate m_args dict and pass on!
-			# parallelize=True
-			# n_designs=10
-			# n_iterations=1
+		
+			m_args = {
+				'parallelize': kwargs.get('parallelize', False),
+				'n_designs': kwargs.get('n_designs', 10),
+				'n_iterations': kwargs.get('n_iterations', 1)
+			}
+			kwargs['m_args'] = m_args
 
 			# initialize the ADO object
 			ado_instance = ado.initialize(**kwargs)
