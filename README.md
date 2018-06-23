@@ -2,24 +2,24 @@
 
 ### Simulation code to run Hierarchical Adaptive Design Optimization (Cavagnaro, Myung, Pitt, NIPS 2009) with the experience-based learning paradigm.
 
-People first engage in a classification learning task and subsequently in an information acquisition task. This code only works for the 3 category / 2 binary feature case. Our goal is to infer which model (=> set of three parameters, two parameters specifying degree/order of Sharma-Mittal entropy measure and one parameter associated with the response function) best describes participants behavior. This particular instance of the code only works for a binary response, i.e., subjects either prefer the first or the second feature.
+People first engage in a classification learning task and subsequently in an information acquisition task. This code only works for the 3 category / 2 binary feature case. Our goal is to infer which model (=> set of three parameters, two parameters specifying degree/order of Sharma-Mittal entropy measure and one parameter associated with the response function) best describes participant's behavior. This particular instance of the code only works for a binary response, i.e., subjects either prefer the first or the second feature.
 
-In running simulations we are particularly interested in two use cases:
-- Use case 1: We want to run full simulation studies over many stages, simulating sequential responses for particular combinations of degree/order/response beta.
+In running simulations, we are particularly interested in two use cases:
+- Use case 1: We want to run full simulation studies over many stages, simulating sequential responses for particular combinations of degree/order/response-beta.
 - Use case 2: We want to perform Design Optimization (DO) for a particular prior (our current belief) to determine which experiment (design) to run next 
 
 We can either run a full, multi-stage simulation, or specify prior and/or design and only run a single HADO step. To exectute these commands, no installation is necessary, just download and copy the repository to a local folder.
 
 Each simualted stage will produce six files in a folder specified by the user:
 - design.npy: The experimental design (environmental probabilities) used in that particular stage
-- design.txt: a numeric/verbal description of the design containing all probabilities, including in a format that can be entered into the experimental software, and logs
+- design.txt: a numeric/textual description of the design containing all probabilities, including in a format that can be entered into the experimental software, and logs
 - figures.pdf: The main plots showing prior, posterior, design, and likelihoods in a graphical format
-- posterior_0.npy: The resulting posteroir if the participant picks the first feature/question (Q_1)
-- posterior_1.npy: The resulting posteroir if the participant picks the second feature/question (Q_2)
+- posterior_0.npy: The resulting posterior if the participant picks the first feature/question (Q_1)
+- posterior_1.npy: The resulting posterior if the participant picks the second feature/question (Q_2)
 - prior.npy: The prior used for that particular experimental stage
 
 
-The code enables us to do both of these things (full and stepwise simulations) by executing the python script in the main folder, run_ado.py, e.g., in the following ways:
+The code enables us to do both full and stepwise simulations by executing the python script in the main folder, **run_ado.py**, e.g., in the following ways:
 
 ```
 python run_ado.py --config=config.txt --full --seed=123
